@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260502095902CBYXXN">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.3. Conceptos de menor complementario y adjunto | Álgebra lineal</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Curso 2º - Enseñanza Bachillerato
+Nombre asignatura/materia: Matemáticas II">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../libs/exe_effects/exe_effects.js"> </script>
+<link rel="stylesheet" href="../libs/exe_effects/exe_effects.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><script src="../theme/z-custom-effects.js"> </script><link rel="stylesheet" href="../theme/colores.css"><link rel="stylesheet" href="../theme/comic.css"><link rel="stylesheet" href="../theme/ejercicio.css"><link rel="stylesheet" href="../theme/libreta.css"><link rel="stylesheet" href="../theme/navegacion.css"><link rel="stylesheet" href="../theme/nota-azul.css"><link rel="stylesheet" href="../theme/retroalimentacion.css"><link rel="stylesheet" href="../theme/style.css">
+<script src="../libs/exe_math/tex-mml-svg.js"> </script>
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260502095902CBYXXN" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Álgebra lineal: Determinantes</a>
+</li>
+<li class="current-page-parent"> <a href="../html/1-introduccion-a-los-determinantes.html" class="daddy">1. Introducción a los determinantes</a>
+<ul class="other-section">
+<li> <a href="../html/11-determinante-de-una-matriz-cuadrada.html" class="no-ch">1.1. Determinante de una matriz cuadrada</a>
+</li>
+<li> <a href="../html/12-propiedades-de-los-determinantes.html" class="no-ch">1.2. Propiedades de los determinantes</a>
+</li>
+<li class="active"> <a href="../html/13-conceptos-de-menor-complementario-y-adjunto.html" class="active no-ch">1.3. Conceptos de menor complementario y adjunto</a>
+</li>
+<li> <a href="../html/14-desarrollo-de-un-determinante-por-el-metodo-de-.html" class="no-ch">1.4. Desarrollo de un determinante por el método de Gauss</a>
+</li>
+</ul>
+</li>
+<li> <a href="../html/2-especial-selectividad.html" class="no-ch">2. Especial Selectividad</a>
+</li>
+<li> <a href="../html/resumen.html" class="no-ch">Resumen</a>
+</li>
+</ul>
+</nav><main id="20260502095902CBYXXN" class="page"> 
+<header class="main-header">
+<div class="package-header"><p class="package-title">Álgebra lineal</p>
+<p class="package-subtitle">Determinantes</p></div>
+<div class="page-header"><h1 class="page-title">1.3. Conceptos de menor complementario y adjunto</h1></div>
+</header><div id="page-content-20260502095902CBYXXN" class="page-content">
+<article id="20260502095902LIUZDQ" class="box no-header sin-nada">
+<header class="box-head no-icon">
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-rtrxdde7i" class="idevice_node text sin-nada" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-rtrxdde7i&quot;}">
+<div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><table border="0" align="right" cellpadding="15">
+<tbody>
+<tr style="border: 1px solid #ffffff;">
+<td><img src="../content/resources/idevice-mm6cukpv-rtrxdde7i/losproblemascrecen_1.png" alt="" height="272" width="202"></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">En la década de los 90 del pasado siglo, emitían en la televisión una serie americana cuyo título se traducía por "Los problemas crecen". Ese podría ser el lema de los matemáticos. En cuanto vemos la solución a un determinado problema ya queremos ir un poco más allá. Siempre pensamos qué ocurriría si tenemos más datos o más incógnitas, o si lo que hemos visto hasta el momento se puede generalizar a otros casos más. En general buscamos algoritmos y propiedades que puedan cumplirse en la mayor cantidad de casos. Eso es lo que vamos a hacer en este apartado.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">En el punto 1.1 has visto dos reglas, una para hallar el determinante de una matriz cuadrada de orden 2 y otra para la de orden 3, la muy conocida regla de Sarrus. Lamentablemente ya no existen reglas para determinantes de orden superior, por lo que si queremos encontrar el valor del determinante de una matriz cuadrada de orden mayor que 3, tenemos que simplificarla utilizando las propiedades que hemos visto en el punto anterior. Veremos cómo se hace.</p><p class="clearfix"></p></div>
+            </div></div></div>
+</div>
+</div>
+</article><article id="20260502095902EHWITJ" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/icon_definicion.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Menor complementario. Adjunto. Matriz adjunta.</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-ikumcuyps" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-ikumcuyps&quot;}">
+<div class="exe-text-template">
+    <table cellpadding="15" style="width: 99.9846%; background-color: #d3fada;">
+<tbody>
+<tr>
+<td style="width: 99.9538%;">En una matriz cuadrada \(A\) se llama <span style="font-weight: bolder; color: #007632;">menor complementario</span> del término \(a_{ij}\) al determinante de la submatriz que queda al quitar la fila y la columna en la que se encuentra el término \( a_{ij} \).</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p> Unas veces se representa por \( m_{ij} \) y otras por \( \alpha_{ij} \).  Observa el cálculo de alguno de estos elementos en las siguientes tres imágenes:</p>
+<div class="exe-fx exe-carousel">
+<h2><br /></h2>
+<div style="font-family: Arial, sans-serif; padding: 20px;">
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+<div style="position: relative; display: inline-block; padding: 0 10px;">
+<div style="z-index: 0; position: relative;">\( \left( \begin{array}{rrr} 2 & -1 & 3 \\ 5 & 0 & 4 \\ -3 & 6 & 1 \end{array} \right) \)</div>
+<div style="position: absolute; top: 12%; left: 59%; width: 2.5px; height: 76%; background: rgba(0, 0, 255, 0.6); border-radius: 2px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 82%; left: 12%; width: 76%; height: 2.5px; background: rgba(0, 0, 255, 0.6); border-radius: 2px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 72%; left: 52%; width: 22px; height: 22px; border: 2.5px solid blue; border-radius: 50%; z-index: 2;"><br /></div>
+</div>
+<span style="color: #800000; font-weight: bold; font-size: 1.1em; margin-left: 15px;">Menor complementario</span></div>
+<p style="margin-left: 20px; font-size: 1.1em;">\( m_{32} = \left| \begin{array}{rr} 2 & 3 \\ 5 & 4 \end{array} \right| = 8 - 15 = -7 \)</p>
+</div>
+<h2><br /></h2>
+<div style="font-family: Arial, sans-serif; padding: 20px;">
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+<div style="position: relative; display: inline-block; padding: 0 10px;">
+<div style="z-index: 0; position: relative;">\( \left( \begin{array}{rrr} 2 & -1 & 3 \\ 5 & 0 & 4 \\ -3 & 6 & 1 \end{array} \right) \)</div>
+<div style="position: absolute; top: 12%; left: 78%; width: 2.5px; height: 76%; background: rgba(0, 0, 255, 0.6); border-radius: 2px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 10%; left: 12%; width: 76%; height: 2.5px; background: rgba(0, 0, 255, 0.6); border-radius: 2px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 1%; left: 72%; width: 22px; height: 22px; border: 2.5px solid blue; border-radius: 50%; z-index: 2;"><br /></div>
+</div>
+<span style="color: #800000; font-weight: bold; font-size: 1.1em; margin-left: 15px;">Menor complementario</span></div>
+<p style="margin-left: 20px; font-size: 1.1em;">\( m_{13} = \left| \begin{array}{rr} 5 & 0 \\ -3 & 6 \end{array} \right| = 30 - 0 = 30 \)</p>
+</div>
+<h2><br /></h2>
+<div style="font-family: Arial, sans-serif; padding: 20px;">
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+<div style="position: relative; display: inline-block; padding: 0 10px;">
+<div style="z-index: 0; position: relative;">\( \left( \begin{array}{rrr} 2 & -1 & 3 \\ 5 & 0 & 4 \\ -3 & 6 & 1 \end{array} \right) \)</div>
+<div style="position: absolute; top: 12%; left: 30%; width: 2.5px; height: 76%; background: rgba(0, 0, 255, 0.6); border-radius: 2px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 46%; left: 12%; width: 76%; height: 2.5px; background: rgba(0, 0, 255, 0.6); border-radius: 2px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 35%; left: 23%; width: 22px; height: 22px; border: 2.5px solid blue; border-radius: 50%; z-index: 2;"><br /></div>
+</div>
+<span style="color: #800000; font-weight: bold; font-size: 1.1em; margin-left: 15px;">Menor complementario</span></div>
+<p style="margin-left: 20px; font-size: 1.1em;">\( m_{21} = \left| \begin{array}{rr} -1 & 3 \\ 6 & 1 \end{array} \right| = -1 - 18 = -19 \)</p>
+</div>
+</div>
+<div>
+<div><br /></div>
+<div>
+<table cellpadding="15" style="width: 99.9846%; background-color: #edfcfc;">
+<tbody>
+<tr>
+<td style="width: 99.9538%;">
+<div>
+<div>
+<p>Se define el <span style="color: #0066cc;"><strong>adjunto</strong></span> de un elemento \( a_{ij} \), y se representa por \( A_{ij} \), al menor complementario de dicho número junto con un signo más o menos, según que la suma de los dos subíndices que representan la posición sea par o impar.</p>
+</div>
+</div>
+<p>Se calcula por la expresión: \[ A_{ij}=\left(-1\right)^{i+j}·m_{ij} \] Llamamos <span style="font-weight: bolder; color: #0066cc;">matriz adjunta</span> de \(A\) a aquella en la que se sustituye cada término por su adjunto. Se representa por \(\textrm{Adj(A)}\).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article><article id="20260502095902FCZYBW" class="box caja-azul">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/EducaAnd viejos/icon_udl_exp_ejercicio.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Ejemplo. Adjunto y menor complementario.</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-es6sp5for" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-es6sp5for&quot;}">
+<div class="exe-text-template">
+    <p>A continuación puedes ver el cálculo del menor complementario y el adjunto de un término. Observa la regla de signos que corresponden a los adjuntos y podrás observar que siempre se alternan comenzado con el signo más. Cada vez que nos movemos, en horizontal o vertical, de un término a otro cambia la paridad entre + y -. </p>
+<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; width: 90%; max-width: 1200px; margin: 0 auto; background-color: #f4f8f4; border: 1px solid #c8dcc8; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+<div style="background-color: #007e3a; color: #ffffff; padding: 15px 25px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom: 4px solid #82b93c;">
+<h3 style="margin: 0; font-size: 1.4em; font-weight: normal;">Adjunto y menor complementario de un elemento</h3>
+</div>
+<div style="padding: 25px;">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch; justify-content: space-between;">
+<div style="flex: 1; min-width: 320px; background-color: #ffffff; padding: 25px; border-radius: 8px; border: 1px solid #e0e0e0; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;"><span style="font-size: 1.4em; color: #0000cc; font-weight: bold;">\( A = \)</span>
+<div style="position: relative; display: inline-block; padding: 10px;">
+<div style="position: absolute; top: 32%; left: 5%; width: 90%; height: 21%; background-color: rgba(204, 68, 0, 0.15); border-radius: 4px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 8%; left: 53%; width: 23%; height: 84%; background-color: rgba(204, 68, 0, 0.15); border-radius: 4px; z-index: 1;"><br /></div>
+<div style="z-index: 2; position: relative; font-size: 1.2em; color: #0000cc;">\( \left( \begin{array}{rrrr} a_{11} & a_{12} & a_{13} & a_{14} \\ a_{21} & a_{22} & a_{23} & a_{24} \\ a_{31} & a_{32} & a_{33} & a_{34} \\ a_{41} & a_{42} & a_{43} & a_{44} \end{array} \right) \)</div>
+</div>
+<span style="font-size: 1.4em; color: #0000cc; font-weight: bold;">\( = \)</span>
+<div style="position: relative; display: inline-block; padding: 10px;">
+<div style="position: absolute; top: 32%; left: 5%; width: 90%; height: 21%; background-color: rgba(204, 68, 0, 0.15); border-radius: 4px; z-index: 1;"><br /></div>
+<div style="position: absolute; top: 8%; left: 54%; width: 18%; height: 84%; background-color: rgba(204, 68, 0, 0.15); border-radius: 4px; z-index: 1;"><br /></div>
+<div style="z-index: 2; position: relative; font-size: 1.2em; color: #0000cc;">\( \left( \begin{array}{rrrr} 5 & -2 & 3 & 5 \\ 0 & -5 & 1 & 2 \\ 2 & 6 & -2 & 4 \\ 2 & 9 & 8 & 0 \end{array} \right) \)</div>
+</div>
+</div>
+<div style="text-align: left; margin-top: 20px; padding-left: 20px;"><span style="color: #0000cc; font-size: 1.2em; font-weight: bold;">\( a_{23} = 1 \)</span></div>
+</div>
+<div style="background: linear-gradient(to bottom, #eeeeee, #dddddd); padding: 20px; border: 2px solid #cc4400; border-radius: 4px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); min-width: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<p style="margin: 0 0 15px 0; color: #cc4400; font-size: 1.3em; font-weight: bold;">\( (-1)^{4+4} \)</p>
+<table style="border-collapse: collapse; margin: 0 auto; background-color: #e0e0e0; border: 2px solid #cc4400;">
+<tbody style="color: #0000cc; font-weight: bold; font-size: 1.4em; text-align: center;">
+<tr>
+<td style="border: 1px solid #cc4400; width: 35px; height: 35px;">+</td>
+<td style="border: 1px solid #cc4400; width: 35px; height: 35px;">-</td>
+<td style="border: 1px solid #cc4400; width: 35px; height: 35px;">+</td>
+<td style="border: 1px solid #cc4400; width: 35px; height: 35px;">-</td>
+</tr>
+<tr>
+<td style="border: 1px solid #cc4400; height: 35px;">-</td>
+<td style="border: 1px solid #cc4400; height: 35px;">+</td>
+<td style="border: 1px solid #cc4400; height: 35px;">-</td>
+<td style="border: 1px solid #cc4400; height: 35px;">+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #cc4400; height: 35px;">+</td>
+<td style="border: 1px solid #cc4400; height: 35px;">-</td>
+<td style="border: 1px solid #cc4400; height: 35px;">+</td>
+<td style="border: 1px solid #cc4400; height: 35px;">-</td>
+</tr>
+<tr>
+<td style="border: 1px solid #cc4400; height: 35px;">-</td>
+<td style="border: 1px solid #cc4400; height: 35px;">+</td>
+<td style="border: 1px solid #cc4400; height: 35px;">-</td>
+<td style="border: 1px solid #cc4400; height: 35px; background-color: #ffffff;">+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 15px 0 0 0; color: #0000cc; font-size: 0.95em;">Signos de los adjuntos</p>
+</div>
+</div>
+<div style="margin-top: 25px; background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e0e0e0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<div style="color: #0000cc; font-size: 1.2em; display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 30px;">
+<div style="text-align: right; line-height: 1.2;">\( \alpha_{23} = \) <br /><span style="font-size: 0.75em; color: #0000cc;">(menor)</span></div>
+<div>\( \left| \begin{array}{rrr} a_{11} & a_{12} & a_{14} \\ a_{31} & a_{32} & a_{34} \\ a_{41} & a_{42} & a_{44} \end{array} \right| = \left| \begin{array}{rrr} 5 & -2 & 5 \\ 2 & 6 & 4 \\ 2 & 9 & 0 \end{array} \right| = \mathbf{-166} \)</div>
+</div>
+<div style="color: #0000cc; font-size: 1.3em; display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
+<div style="text-align: right; line-height: 1.2; font-weight: bold;">\( A_{23} = \) <br /><span style="font-size: 0.7em; font-weight: normal;">(adjunto)</span></div>
+<div style="font-weight: bold;">\( (-1)^{2+3} \alpha_{23} = -(-166) = 166 \)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article><article id="20260502095902GSBUDO" class="box caja-roja">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/bidio.gif" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Vídeo: hallar la matriz adjunta.</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-b998av1e5" class="idevice_node text caja-roja" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-b998av1e5&quot;}">
+<div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p style="text-align: left;">En el siguiente video de abajo puedes ver un ejemplo de como hallar la matriz adjunta de otra: <a href="https://www.youtube.com/watch?v=R291dxMdXOI" target="_blank" id="link_2" rel="noopener"><img src="../content/resources/idevice-mm6cukpv-b998av1e5/yutube.png" width="52" height="53" alt=""></a></p>
+<p style="text-align: left;">Observa cómo al calcular los adjuntos, los signos más y los menos, se alternan.</p><p class="clearfix"></p></div>
+            </div></div></div>
+</div>
+</div>
+</article><article id="20260502095902UCTPDG" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/icon_definicion.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Desarrollo de un determinante por los elementos de una línea.</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-fmdqeh6mf" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-fmdqeh6mf&quot;}">
+<div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p>Un determinante se puede desarrollar mediante la suma de los productos de cada elemento de una de sus líneas, por su adjunto correspondiente.</p>
+<p>En las imágenes siguientes, se representa por \(\alpha_{ij}\) el menor complementario, por lo que el adjunto sería \(\left(-1\right)^{i+j}·\alpha_{ij}\).</p>
+<div class="exe-fx exe-tabs">
+<h2>Desarrollo de un determinante por los elementos de una fila</h2>
+<p style="text-align: center;"><img src="../content/resources/idevice-mm6cukpv-fmdqeh6mf/desporfila.png" width="1412" height="544" alt=""></p>
+<p>&nbsp;&nbsp;</p>
+<p>&nbsp;&nbsp;</p>
+<h2>Desarrollo de un determinante por los elementos de una columna</h2>
+<p style="text-align: center;"><img src="../content/resources/idevice-mm6cukpv-fmdqeh6mf/desporcolumna.png" width="1446" height="547" alt=""></p>
+</div><p class="clearfix"></p></div>
+            </div></div></div>
+</div>
+</div>
+</article><article id="20260502095902RDWXBT" class="box caja-roja">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/bidio.gif" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Vídeo. Determinante haciendo ceros.</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-81of7ku6c" class="idevice_node text caja-roja" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-81of7ku6c&quot;}">
+<div class="exe-text-template"><div class="textIdeviceContent">
+            <div class="exe-text-activity">
+                <div><p>Hay un modo de hacer este proceso más fácil. Consiste en utilizar las propiedades de los determinantes que vimos en el apartado anterior para hacer todos los elementos de una línea, menos uno, ceros. Después desarrollamos por esa línea y solo tenemos que hallar un adjunto, que siempre contendrá un determinante de orden inferior. Esto lo podemos ver explicado, paso a paso, en el siguiente video: <a href="https://www.youtube.com/watch?v=32ynZq6jPqg" target="_blank" id="link_3" rel="noopener"><img src="../content/resources/idevice-mm6cukpv-81of7ku6c/yutube.png" width="69" height="71" alt="" style="vertical-align: text-top;"></a></p><p class="clearfix"></p></div>
+            </div></div></div>
+</div>
+</div>
+</article><article id="20260502095902KVRSZI" class="box caja-azul ejercicio-custom">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/icon_ejercicioresuelto.png" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Ejercicio resuelto</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-mm6cukpv-09yy9u0c0" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-mm6cukpv-09yy9u0c0&quot;}">
+<div class="exe-text-template">
+    <div class="exe-text-activity"><p>Aplica todo lo que has visto al cálculo del determinante \(<br />\left| \begin{array}{rrrr} 1 & 2 & 1 & -1 \\ 2 & -1 & 5 & -2 \\ 4 & 7 & 3 & 0 \\ 3 & 2 & 4 & -5 \end{array} \right| \)<br /><br /></p><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbacktooglebutton" value="Mostrar retroalimentación" data-text-a="Mostrar retroalimentación" data-text-b="Mostrar retroalimentación"></div><div class="feedback js-feedback js-hidden" style="display: none;"><p>\begin{aligned} \left| \begin{array}{rrrr} 1 & 2 & 1 & -1 \\ 2 & -1 & 5 & -2 \\ 4 & 7 & 3 & 0 \\ 3 & 2 & 4 & -5 \end{array} \right| &= \left[ \begin{array}{l} C_2 \rightarrow C_2 - 2C_1 \\ C_3 \rightarrow C_3 - C_1 \\ C_4 \rightarrow C_4 + C_1 \end{array} \right] = \left| \begin{array}{rrrr} 1 & 0 & 0 & 0 \\ 2 & -5 & 3 & 0 \\ 4 & -1 & -1 & 4 \\ 3 & -4 & 1 & -2 \end{array} \right| \\[10pt] &\text{(Desarrollo } F_1) = 1 \cdot \left| \begin{array}{rrr} -5 & 3 & 0 \\ -1 & -1 & 4 \\ -4 & 1 & -2 \end{array} \right| \\[10pt] &= (-10 - 48 + 0) - (0 - 20 + 6) \\[10pt] &= -58 - (-14) = \mathbf{-44} \end{aligned}</p></div></div>
+</div>
+</div>
+</div>
+</article><article id="block-muyicq22-mrc8ufp3w" class="box sin-nada">
+<header class="box-head no-icon">
+<h1 class="box-title">Texto</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1791401756903-iy1ax5mja" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-1791401756903-iy1ax5mja&quot;}">
+<div class="exe-text-template">
+    <!-- TUTOR INTERACTIVO: DETERMINANTES 3x3 Y 4x4 POR ADJUNTOS -->
+<div id="tutor-det-app" style="max-width: 900px; margin: 20px auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; border: 1px solid #dcdfe6; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.06); padding: 24px; color: #2c3e50;"><!-- Encabezado y controles de dimensión -->
+<div style="border-bottom: 2px solid #ea580c; padding-bottom: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+<div>
+<h3 style="margin: 0; color: #9a3412; font-size: 1.3rem;">Tutor: Determinante por Menores Complementarios y Adjuntos</h3>
+<div style="margin-top: 6px; font-size: 0.9rem; color: #64748b;">Dimensión: <label style="margin-right: 10px; cursor: pointer;"><input type="radio" name="tam_det" value="3" checked="checked" onchange="cambiarTamano(3)" /> 3×3</label> <label style="cursor: pointer;"><input type="radio" name="tam_det" value="4" onchange="cambiarTamano(4)" /> 4×4</label></div>
+</div>
+<button onclick="generarNuevoProblema()" style="background: #ea580c; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 500;">Nuevo Ejercicio</button></div>
+<!-- Contenedor Matriz Actual -->
+<div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; overflow-x: auto;">
+<p style="margin: 0 0 10px 0; font-weight: 600;">Determinante a calcular:</p>
+<div id="contenedor-matriz" style="font-size: 1.25rem;"></div>
+</div>
+<!-- Paso previo: Simplificación con ceros (Opcional) -->
+<div id="fase-ceros" style="display: none; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+<div style="font-weight: 600; margin-bottom: 6px; color: #9a3412;">Paso previo (Opcional): Simplificación con ceros</div>
+<p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #7c2d12;">Aplica transformaciones elementales (<span style="font-family: serif; font-style: italic;">F<sub>i</sub> → F<sub>i</sub> + k · F<sub>j</sub></span> o <span style="font-family: serif; font-style: italic;">C<sub>i</sub> → C<sub>i</sub> + k · C<sub>j</sub></span>) para generar ceros antes de desarrollar.</p>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;"><select id="op-tipo" onchange="actualizarSelectoresLineasOp()" style="padding: 6px; border-radius: 5px; border: 1px solid #cbd5e1;">
+<option value="F">Fila</option>
+<option value="C">Columna</option>
+</select><select id="op-dest" onchange="actualizarLabelOp()" style="padding: 6px; border-radius: 5px; border: 1px solid #cbd5e1;"></select><span>→</span> <span id="label-op-dest" style="font-weight: 600;">F1</span> <span>+ (</span>
+<div style="display: inline-flex; align-items: center;"><select id="op-k-signo" style="padding: 6px 4px; border-radius: 5px 0 0 5px; border: 1px solid #cbd5e1; border-right: none; background: #f8fafc; font-weight: 600;">
+<option value="1">+</option>
+<option value="-1" selected="selected">−</option>
+</select><input type="text" id="op-k-val" value="1" style="width: 45px; padding: 6px; border-radius: 0 5px 5px 0; border: 1px solid #cbd5e1; text-align: right; font-weight: 600;" /></div>
+<span>) ·</span><select id="op-orig" style="padding: 6px; border-radius: 5px; border: 1px solid #cbd5e1;"></select><button onclick="aplicarOperacion()" style="background: #008744; color: white; border: none; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">Aplicar</button> <button onclick="deshacerOperacion()" style="background: #ffffff; color: #008744; border: 2px solid #008744; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-weight: 500;">Deshacer</button></div>
+</div>
+<!-- Paso 1: Elección de línea -->
+<div id="fase-1" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+<div style="font-weight: 600; margin-bottom: 8px; color: #1e40af;">Paso 1: Selecciona la fila o columna para desarrollar</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;"><label>Desarrollar por:<select id="sel-linea" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1;"></select></label> <button onclick="fijarLinea()" style="background: #008744; color: white; border: none; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">Confirmar línea</button></div>
+</div>
+<!-- Paso 2: Menores complementarios m_ij y signos -->
+<div id="fase-2" style="display: none; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+<div style="font-weight: 600; margin-bottom: 8px; color: #1e40af;">Paso 2: Signos de posición y menores complementarios <span style="font-family: serif; font-style: italic;">m<sub>ij</sub></span></div>
+<p style="margin: 0 0 14px 0; font-size: 0.95rem; color: #475569;">Determina el signo de cada posición y el valor de cada determinante menor <span style="font-family: serif; font-style: italic;">m<sub>ij</sub></span>.</p>
+<div id="items-adjuntos" style="display: flex; flex-direction: column; gap: 14px;"></div>
+<div style="margin-top: 18px;"><button onclick="validarAdjuntos()" style="background: #0284c7; color: white; border: none; padding: 7px 16px; border-radius: 6px; cursor: pointer; font-weight: 500;">Comprobar menores</button> <span id="feedback-paso2" style="margin-left: 12px; font-weight: 500;"></span></div>
+</div>
+<!-- Paso 3: Cálculo Explícito de Adjuntos A_ij -->
+<div id="fase-3" style="display: none; background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+<div style="font-weight: 600; margin-bottom: 8px; color: #6b21a8;">Paso 3: Cálculo explícito de los adjuntos <span style="font-family: serif; font-style: italic;">A<sub>ij</sub></span></div>
+<p style="margin: 0 0 14px 0; font-size: 0.95rem; color: #581c87;">Calcula el adjunto uniendo el signo y el menor: <span style="font-family: serif; font-style: italic;">A<sub>ij</sub> = (-1)<sup>i+j</sup> · m<sub>ij</sub></span>, y obtén el término resultante <span style="font-family: serif; font-style: italic;">a<sub>ij</sub> · A<sub>ij</sub></span>.</p>
+<div id="items-calculo-adjuntos" style="display: flex; flex-direction: column; gap: 12px;"></div>
+<div style="margin-top: 16px;"><button onclick="validarCalculoAdjuntos()" style="background: #7c3aed; color: white; border: none; padding: 7px 16px; border-radius: 6px; cursor: pointer; font-weight: 500;">Comprobar adjuntos A<sub>ij</sub></button> <span id="feedback-paso3" style="margin-left: 12px; font-weight: 500;"></span></div>
+</div>
+<!-- Paso 4: Suma y resultado final -->
+<div id="fase-4" style="display: none; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+<div style="font-weight: 600; margin-bottom: 8px; color: #1e40af;">Paso 4: Suma total y resultado final</div>
+<p style="margin: 0 0 12px 0; font-size: 0.95rem; color: #475569;">Suma los términos obtenidos: <span style="font-family: serif; font-style: italic;">|A| = ∑ a<sub>ij</sub> · A<sub>ij</sub></span>.</p>
+<div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;"><label for="inp-det-total" style="font-family: serif; font-style: italic; font-weight: bold; font-size: 1.1rem;">|A| =</label>
+<div style="display: inline-flex; align-items: center;"><select id="det-total-signo" style="padding: 6px 6px; border-radius: 6px 0 0 6px; border: 1px solid #cbd5e1; border-right: none; background: #f8fafc; font-weight: bold; font-size: 1rem;">
+<option value="1">+</option>
+<option value="-1">−</option>
+</select><input type="text" id="inp-det-total" placeholder="valor" style="width: 75px; padding: 6px; border-radius: 0 6px 6px 0; border: 1px solid #cbd5e1; text-align: right; font-weight: 600;" /></div>
+<button onclick="validarTotal()" style="background: #008744; color: white; border: none; padding: 7px 16px; border-radius: 6px; cursor: pointer; font-weight: 500;">Finalizar</button> <span id="feedback-final" style="font-weight: 600;"></span></div>
+</div>
+</div>
+<script>
+(function() {
+  let N = 3;
+  let A = [];
+  let historialA = [];
+  let lineaTipo = 'f';
+  let lineaIdx = 0;
+  let terminos = [];
+
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function refrescarMathJax() {
+    if (window.MathJax) {
+      if (typeof MathJax.typesetPromise === 'function') {
+        MathJax.typesetPromise();
+      } else if (typeof MathJax.typeset === 'function') {
+        MathJax.typeset();
+      } else if (MathJax.Hub && typeof MathJax.Hub.Queue === 'function') {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    }
+  }
+
+  window.cambiarTamano = function(nuevoN) {
+    N = nuevoN;
+    generarNuevoProblema();
+  };
+
+  window.generarNuevoProblema = function() {
+    A = [];
+    historialA = [];
+    for (let i = 0; i < N; i++) {
+      let f = [];
+      for (let j = 0; j < N; j++) {
+        f.push(randInt(-2, 3));
+      }
+      A.push(f);
+    }
+
+    if (N === 4) {
+      if (!A.some(row => row.some(v => Math.abs(v) === 1))) {
+        A[0][0] = 1;
+      }
+      document.getElementById('fase-ceros').style.display = 'block';
+    } else {
+      document.getElementById('fase-ceros').style.display = 'none';
+    }
+
+    actualizarSelectoresLineasOp();
+    poblarSelectorLineas();
+    renderMatriz();
+
+    document.getElementById('fase-2').style.display = 'none';
+    document.getElementById('fase-3').style.display = 'none';
+    document.getElementById('fase-4').style.display = 'none';
+    document.getElementById('feedback-paso2').innerHTML = '';
+    document.getElementById('feedback-paso3').innerHTML = '';
+    document.getElementById('feedback-final').innerHTML = '';
+  };
+
+  function formatMatrizLatex(m) {
+    let dim = m.length;
+    let align = "r".repeat(dim);
+    let filas = [];
+    for (let i = 0; i < dim; i++) {
+      filas.push(m[i].join(' & '));
+    }
+    let cuerpo = filas.join(String.raw` \\ `);
+    return String.raw`\left| \begin{array}{` + align + String.raw`} ` + cuerpo + String.raw` \end{array} \right|`;
+  }
+
+  function renderMatriz() {
+    let latex = String.raw`\( |A| = ` + formatMatrizLatex(A) + String.raw` \)`;
+    document.getElementById('contenedor-matriz').innerHTML = latex;
+    refrescarMathJax();
+  }
+
+  function poblarSelectorLineas() {
+    let sel = document.getElementById('sel-linea');
+    sel.innerHTML = '';
+    for (let i = 1; i <= N; i++) {
+      sel.innerHTML += '<option value="f' + i + '">Fila ' + i + '</option>';
+    }
+    for (let j = 1; j <= N; j++) {
+      sel.innerHTML += '<option value="c' + j + '">Columna ' + j + '</option>';
+    }
+  }
+
+  window.actualizarSelectoresLineasOp = function() {
+    let tipo = document.getElementById('op-tipo').value;
+    let sDest = document.getElementById('op-dest');
+    let sOrig = document.getElementById('op-orig');
+    
+    let prevDest = sDest.value || "0";
+    let prevOrig = sOrig.value || "1";
+
+    sDest.innerHTML = '';
+    sOrig.innerHTML = '';
+    for (let i = 1; i <= N; i++) {
+      let etiqueta = tipo + i;
+      sDest.innerHTML += '<option value="' + (i - 1) + '">' + etiqueta + '</option>';
+      sOrig.innerHTML += '<option value="' + (i - 1) + '">' + etiqueta + '</option>';
+    }
+
+    sDest.value = (parseInt(prevDest) < N) ? prevDest : "0";
+    sOrig.value = (parseInt(prevOrig) < N) ? prevOrig : "1";
+    if (sDest.value === sOrig.value) {
+      sOrig.value = (sDest.value === "0") ? "1" : "0";
+    }
+
+    actualizarLabelOp();
+  };
+
+  window.actualizarLabelOp = function() {
+    let tipo = document.getElementById('op-tipo').value;
+    let idx = parseInt(document.getElementById('op-dest').value) + 1;
+    document.getElementById('label-op-dest').textContent = tipo + idx;
+  };
+
+  window.aplicarOperacion = function() {
+    let tipo = document.getElementById('op-tipo').value;
+    let d = parseInt(document.getElementById('op-dest').value);
+    let o = parseInt(document.getElementById('op-orig').value);
+    
+    let signK = parseInt(document.getElementById('op-k-signo').value);
+    let absK = parseInt(document.getElementById('op-k-val').value.trim());
+    let k = signK * absK;
+
+    if (d === o) {
+      alert("La línea de destino y la línea origen deben ser distintas.");
+      return;
+    }
+    if (isNaN(k) || k === 0) {
+      alert("Introduce un coeficiente k distinto de 0.");
+      return;
+    }
+
+    historialA.push(JSON.parse(JSON.stringify(A)));
+
+    if (tipo === 'F') {
+      for (let j = 0; j < N; j++) {
+        A[d][j] += k * A[o][j];
+      }
+    } else {
+      for (let i = 0; i < N; i++) {
+        A[i][d] += k * A[i][o];
+      }
+    }
+
+    renderMatriz();
+  };
+
+  window.deshacerOperacion = function() {
+    if (historialA.length > 0) {
+      A = historialA.pop();
+      renderMatriz();
+    }
+  };
+
+  function getSubmatriz(m, r, c) {
+    let sub = [];
+    for (let i = 0; i < m.length; i++) {
+      if (i === r) continue;
+      let fila = [];
+      for (let j = 0; j < m.length; j++) {
+        if (j === c) continue;
+        fila.push(m[i][j]);
+      }
+      sub.push(fila);
+    }
+    return sub;
+  }
+
+  function determinanteRec(m) {
+    if (m.length === 1) return m[0][0];
+    if (m.length === 2) return m[0][0] * m[1][1] - m[0][1] * m[1][0];
+    let sum = 0;
+    for (let j = 0; j < m.length; j++) {
+      let signo = ((j % 2) === 0) ? 1 : -1;
+      sum += m[0][j] * signo * determinanteRec(getSubmatriz(m, 0, j));
+    }
+    return sum;
+  }
+
+  window.fijarLinea = function() {
+    let val = document.getElementById('sel-linea').value;
+    lineaTipo = val.charAt(0);
+    lineaIdx = parseInt(val.charAt(1)) - 1;
+
+    terminos = [];
+    let cont = document.getElementById('items-adjuntos');
+    cont.innerHTML = '';
+
+    for (let k = 0; k < N; k++) {
+      let r = (lineaTipo === 'f') ? lineaIdx : k;
+      let c = (lineaTipo === 'f') ? k : lineaIdx;
+      let posI = r + 1;
+      let posJ = c + 1;
+      let signoEsperado = Math.pow(-1, posI + posJ);
+      let sub = getSubmatriz(A, r, c);
+      let mVal = determinanteRec(sub);
+      let elem = A[r][c];
+
+      terminos.push({ 
+        r: r, 
+        c: c, 
+        posI: posI, 
+        posJ: posJ, 
+        elem: elem, 
+        signo: signoEsperado, 
+        menor: mVal,
+        adjunto: signoEsperado * mVal,
+        producto: elem * (signoEsperado * mVal)
+      });
+
+      let card = document.createElement('div');
+      card.style = "background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; justify-content: flex-start; gap: 14px; flex-wrap: wrap; box-shadow: 0 1px 3px rgba(0,0,0,0.04);";
+
+      let subTex = formatMatrizLatex(sub);
+
+      if (elem === 0) {
+        card.innerHTML = 
+          '<div style="background: #f1f5f9; border-radius: 6px; padding: 6px 12px; font-weight: 700; color: #334155; font-size: 1.05rem;">' +
+            'a<sub>' + posI + '' + posJ + '</sub> = 0' +
+          '</div>' +
+          '<div style="color: #64748b; font-style: italic; font-size: 0.95rem;">' +
+            'Elemento nulo: este término se anula en la suma (0 &middot; A<sub>' + posI + '' + posJ + '</sub> = 0).' +
+          '</div>';
+      } else {
+        card.innerHTML = 
+          '<!-- Bloque 1: Elemento -->' +
+          '<div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 6px; padding: 6px 12px; font-weight: 700; color: #1e40af; font-size: 1.05rem; white-space: nowrap;">' +
+            'a<sub>' + posI + '' + posJ + '</sub> = ' + elem +
+          '</div>' +
+
+          '<div style="width: 1px; height: 38px; background: #e2e8f0;"></div>' +
+
+          '<!-- Bloque 2: Signo de posición -->' +
+          '<div style="display: flex; align-items: center; gap: 8px; background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 6px; padding: 6px 10px; white-space: nowrap;">' +
+            '<span style="color: #6b21a8; font-size: 0.95rem; font-weight: 600;">Signo (-1)<sup>' + posI + '+' + posJ + '</sup>:</span>' +
+            '<select id="signo-' + k + '" style="padding: 4px 8px; border-radius: 4px; border: 1px solid #d8b4fe; font-weight: 600; color: #581c87;">' +
+              '<option value="1">+1</option>' +
+              '<option value="-1">&minus;1</option>' +
+            '</select>' +
+          '</div>' +
+
+          '<div style="width: 1px; height: 38px; background: #e2e8f0;"></div>' +
+
+          '<!-- Bloque 3: Menor complementario m_ij -->' +
+          '<div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px 14px; overflow-x: auto;">' +
+            '<span style="font-weight: 600; color: #0f172a; font-family: serif; font-style: italic; font-size: 1.1rem;">m<sub>' + posI + '' + posJ + '</sub> =</span>' +
+            '<span style="margin: 0 4px; font-size: 1.1rem;">' + String.raw`\( ` + subTex + String.raw` \)` + '</span>' +
+            '<span style="font-weight: 600; margin: 0 2px;">=</span>' +
+            '<div style="display: inline-flex; align-items: center;">' +
+              '<select id="menor-signo-' + k + '" style="padding: 6px 4px; border-radius: 4px 0 0 4px; border: 1px solid #cbd5e1; border-right: none; background: #ffffff; font-weight: 700; font-size: 0.95rem;">' +
+                '<option value="1">+</option>' +
+                '<option value="-1">&minus;</option>' +
+              '</select>' +
+              '<input type="text" id="menor-val-' + k + '" placeholder="valor" style="width: 65px; padding: 6px; border-radius: 0 4px 4px 0; border: 1px solid #cbd5e1; text-align: right; font-weight: 600;">' +
+            '</div>' +
+          '</div>';
+      }
+      cont.appendChild(card);
+    }
+
+    document.getElementById('fase-2').style.display = 'block';
+    document.getElementById('fase-3').style.display = 'none';
+    document.getElementById('fase-4').style.display = 'none';
+    document.getElementById('feedback-paso2').innerHTML = '';
+    document.getElementById('feedback-paso3').innerHTML = '';
+    refrescarMathJax();
+  };
+
+  function leerNumeroConSigno(idSigno, idInput) {
+    let s = parseInt(document.getElementById(idSigno).value);
+    let txt = document.getElementById(idInput).value.trim();
+    if (txt === '') return NaN;
+    let n = parseInt(txt);
+    if (isNaN(n)) return NaN;
+    if (txt.startsWith('-')) return n;
+    return s * Math.abs(n);
+  }
+
+  window.validarAdjuntos = function() {
+    let correcto = true;
+    for (let k = 0; k < N; k++) {
+      if (terminos[k].elem === 0) continue;
+
+      let sInput = parseInt(document.getElementById('signo-' + k).value);
+      let mInput = leerNumeroConSigno('menor-signo-' + k, 'menor-val-' + k);
+
+      if (sInput !== terminos[k].signo || isNaN(mInput) || mInput !== terminos[k].menor) {
+        correcto = false;
+        break;
+      }
+    }
+
+    let fb = document.getElementById('feedback-paso2');
+    if (correcto) {
+      fb.style.color = '#16a34a';
+      fb.innerHTML = '¡Correcto! Todos los signos y menores complementarios son válidos.';
+      construirPaso3Adjuntos();
+      document.getElementById('fase-3').style.display = 'block';
+      document.getElementById('fase-4').style.display = 'none';
+    } else {
+      fb.style.color = '#dc2626';
+      fb.innerHTML = 'Revisa los signos de posición o el cálculo de los menores complementarios m.';
+    }
+  };
+
+  // Construcción del nuevo Paso 3: A_ij = (-1)^{i+j} * m_ij
+  function construirPaso3Adjuntos() {
+    let cont = document.getElementById('items-calculo-adjuntos');
+    cont.innerHTML = '';
+
+    for (let k = 0; k < N; k++) {
+      let t = terminos[k];
+      let row = document.createElement('div');
+      row.style = "background: #ffffff; border: 1px solid #d8b4fe; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; justify-content: flex-start; gap: 14px; flex-wrap: wrap;";
+
+      if (t.elem === 0) {
+        row.innerHTML = `
+          <span style="font-weight: 600; color: #475569;">a<sub>${t.posI}${t.posJ}</sub> = 0</span>
+          <span style="color: #64748b; font-style: italic;">&rarr; Término nulo: 0 &middot; A<sub>${t.posI}${t.posJ}</sub> = 0</span>
+        `;
+      } else {
+        let signoTxt = (t.signo === 1) ? "+1" : "&minus;1";
+        row.innerHTML = `
+          <span style="font-weight: 700; color: #6b21a8; min-width: 60px;">a<sub>${t.posI}${t.posJ}</sub> = ${t.elem}</span>
+          
+          <div style="width: 1px; height: 32px; background: #e9d5ff;"></div>
+
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="font-weight: 600; color: #581c87; font-family: serif; font-style: italic;">A<sub>${t.posI}${t.posJ}</sub></span>
+            <span>= (${signoTxt}) &middot; (${t.menor}) = </span>
+            <div style="display: inline-flex; align-items: center;">
+              <select id="adj-signo-${k}" style="padding: 5px 4px; border-radius: 4px 0 0 4px; border: 1px solid #cbd5e1; border-right: none; background: #ffffff; font-weight: 700;">
+                <option value="1">+</option>
+                <option value="-1">&minus;</option>
+              </select>
+              <input type="text" id="adj-val-${k}" placeholder="A${t.posI}${t.posJ}" style="width: 65px; padding: 5px; border-radius: 0 4px 4px 0; border: 1px solid #cbd5e1; text-align: right; font-weight: 600;">
+            </div>
+          </div>
+
+          <div style="width: 1px; height: 32px; background: #e9d5ff;"></div>
+
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 0.95rem; color: #334155;">Término: <span style="font-family: serif; font-style: italic;">a<sub>${t.posI}${t.posJ}</sub> &middot; A<sub>${t.posI}${t.posJ}</sub></span> = </span>
+            <div style="display: inline-flex; align-items: center;">
+              <select id="prod-signo-${k}" style="padding: 5px 4px; border-radius: 4px 0 0 4px; border: 1px solid #cbd5e1; border-right: none; background: #ffffff; font-weight: 700;">
+                <option value="1">+</option>
+                <option value="-1">&minus;</option>
+              </select>
+              <input type="text" id="prod-val-${k}" placeholder="producto" style="width: 65px; padding: 5px; border-radius: 0 4px 4px 0; border: 1px solid #cbd5e1; text-align: right; font-weight: 600;">
+            </div>
+          </div>
+        `;
+      }
+      cont.appendChild(row);
+    }
+  }
+
+  window.validarCalculoAdjuntos = function() {
+    let correcto = true;
+    for (let k = 0; k < N; k++) {
+      if (terminos[k].elem === 0) continue;
+
+      let aVal = leerNumeroConSigno('adj-signo-' + k, 'adj-val-' + k);
+      let pVal = leerNumeroConSigno('prod-signo-' + k, 'prod-val-' + k);
+
+      if (isNaN(aVal) || aVal !== terminos[k].adjunto || isNaN(pVal) || pVal !== terminos[k].producto) {
+        correcto = false;
+        break;
+      }
+    }
+
+    let fb = document.getElementById('feedback-paso3');
+    if (correcto) {
+      fb.style.color = '#16a34a';
+      fb.innerHTML = '¡Correcto! Todos los adjuntos y términos parciales están bien calculados.';
+      document.getElementById('fase-4').style.display = 'block';
+    } else {
+      fb.style.color = '#dc2626';
+      fb.innerHTML = 'Revisa los cálculos: comprueba los signos de A_ij o el producto por a_ij.';
+    }
+  };
+
+  window.validarTotal = function() {
+    let detReal = determinanteRec(A);
+    let resp = leerNumeroConSigno('det-total-signo', 'inp-det-total');
+    let fb = document.getElementById('feedback-final');
+
+    if (!isNaN(resp) && resp === detReal) {
+      fb.style.color = '#16a34a';
+      fb.innerHTML = '¡Correcto! El valor del determinante es |A| = ' + detReal + '.';
+    } else {
+      fb.style.color = '#dc2626';
+      fb.innerHTML = 'Incorrecto. Revisa la suma de los términos a_ij · A_ij calculados en el paso 3.';
+    }
+  };
+
+  // Inicialización
+  window.generarNuevoProblema();
+})();
+</script>
+</div>
+</div>
+</div>
+</article><article id="block-muyjevby-8ipmfk2lt" class="box sin-nada">
+<header class="box-head no-icon">
+<h1 class="box-title">Texto</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1791403536669-oixpd0bse" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-1791403536669-oixpd0bse&quot;}">
+<div class="exe-text-template">
+    <!-- CALCULADORA DE DETERMINANTES (2x2, 3x3, 4x4, 5x5) -->
+<div id="calc-det-app" style="max-width: 760px; margin: 24px auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; border: 1px solid #dcdfe6; border-radius: 12px; background: #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.06); padding: 24px; color: #2c3e50;"><!-- Cabecera -->
+<div style="border-bottom: 2px solid #0284c7; padding-bottom: 12px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+<div>
+<h3 style="margin: 0; color: #0369a1; font-size: 1.25rem;">Calculadora de Comprobación de Determinantes</h3>
+<p style="margin: 4px 0 0 0; font-size: 0.88rem; color: #64748b;">Introduce los coeficientes de tu matriz para comprobar el resultado final.</p>
+</div>
+<!-- Selector de dimensión -->
+<div style="display: flex; gap: 6px; align-items: center;"><span style="font-weight: 600; font-size: 0.9rem; color: #334155;">Orden:</span><select id="calc-dim" onchange="calcCrearMatriz()" style="padding: 5px 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-weight: 600; color: #0369a1;">
+<option value="2">2×2</option>
+<option value="3" selected="selected">3×3</option>
+<option value="4">4×4</option>
+<option value="5">5×5</option>
+</select></div>
+</div>
+<!-- Rejilla de entrada de la Matriz -->
+<div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;"><!-- Barra izquierda del determinante -->
+<div style="width: 3px; background: #334155; border-radius: 2px; align-self: stretch; margin-right: 12px;"><br /></div>
+<div id="calc-grid-contenedor" style="display: inline-grid; gap: 8px;"></div>
+<!-- Barra derecha del determinante -->
+<div style="width: 3px; background: #334155; border-radius: 2px; align-self: stretch; margin-left: 12px;"><br /></div>
+</div>
+<!-- Botones de acción y Resultado -->
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid #f1f5f9; padding-top: 16px;">
+<div style="display: flex; gap: 8px;"><button onclick="calcCalcular()" style="background: #0284c7; color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.95rem;">Calcular |A|</button> <button onclick="calcLimpiar()" style="background: #ffffff; color: #64748b; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 500;">Limpiar</button></div>
+<!-- Caja del resultado -->
+<div id="calc-resultado" style="font-size: 1.15rem; font-weight: bold; color: #0f172a; padding: 6px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; min-width: 140px; text-align: center;">|A| = —</div>
+</div>
+</div>
+<script>
+(function() {
+  function parseValor(str) {
+    if (!str || str.trim() === '') return 0;
+    str = str.trim().replace(',', '.');
+    if (str.includes('/')) {
+      let partes = str.split('/');
+      let num = parseFloat(partes[0]);
+      let den = parseFloat(partes[1]);
+      if (!isNaN(num) && !isNaN(den) && den !== 0) return num / den;
+    }
+    let val = parseFloat(str);
+    return isNaN(val) ? 0 : val;
+  }
+
+  window.calcCrearMatriz = function() {
+    let n = parseInt(document.getElementById('calc-dim').value);
+    let cont = document.getElementById('calc-grid-contenedor');
+    cont.innerHTML = '';
+    cont.style.gridTemplateColumns = `repeat(${n}, minmax(45px, 60px))`;
+
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        let inp = document.createElement('input');
+        inp.type = 'text';
+        inp.id = `c_${i}_${j}`;
+        inp.placeholder = '0';
+        inp.style.width = '100%';
+        inp.style.boxSizing = 'border-box';
+        inp.style.padding = '8px 4px';
+        inp.style.textAlign = 'right';
+        inp.style.border = '1px solid #cbd5e1';
+        inp.style.borderRadius = '5px';
+        inp.style.fontSize = '0.95rem';
+        
+        // Enter para calcular automáticamente
+        inp.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') calcCalcular();
+        });
+
+        cont.appendChild(inp);
+      }
+    }
+    document.getElementById('calc-resultado').innerHTML = '|A| = —';
+  };
+
+  window.calcLimpiar = function() {
+    let n = parseInt(document.getElementById('calc-dim').value);
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        let el = document.getElementById(`c_${i}_${j}`);
+        if (el) el.value = '';
+      }
+    }
+    document.getElementById('calc-resultado').innerHTML = '|A| = —';
+  };
+
+  // Cálculo de determinante por triangulación de Gauss (O(n^3))
+  function determinanteGauss(mat) {
+    let n = mat.length;
+    let A = mat.map(row => row.slice());
+    let det = 1;
+
+    for (let i = 0; i < n; i++) {
+      // Búsqueda de pivote máximo
+      let pivotRow = i;
+      for (let r = i + 1; r < n; r++) {
+        if (Math.abs(A[r][i]) > Math.abs(A[pivotRow][i])) {
+          pivotRow = r;
+        }
+      }
+
+      if (Math.abs(A[pivotRow][i]) < 1e-12) {
+        return 0; // Columna con ceros: det = 0
+      }
+
+      if (pivotRow !== i) {
+        let temp = A[i];
+        A[i] = A[pivotRow];
+        A[pivotRow] = temp;
+        det = -det; // Cambio de fila cambia el signo del determinante
+      }
+
+      let pivot = A[i][i];
+      det *= pivot;
+
+      for (let r = i + 1; r < n; r++) {
+        let factor = A[r][i] / pivot;
+        for (let c = i; c < n; c++) {
+          A[r][c] -= factor * A[i][c];
+        }
+      }
+    }
+
+    // Corrección de redondeo para enteros
+    return Math.abs(det - Math.round(det)) < 1e-9 ? Math.round(det) : parseFloat(det.toFixed(4));
+  }
+
+  window.calcCalcular = function() {
+    let n = parseInt(document.getElementById('calc-dim').value);
+    let mat = [];
+
+    for (let i = 0; i < n; i++) {
+      let fila = [];
+      for (let j = 0; j < n; j++) {
+        let val = parseValor(document.getElementById(`c_${i}_${j}`).value);
+        fila.push(val);
+      }
+      mat.push(fila);
+    }
+
+    let det = determinanteGauss(mat);
+    let resDiv = document.getElementById('calc-resultado');
+    resDiv.innerHTML = `|A| = <span style="color: #0284c7;">${det}</span>`;
+  };
+
+  // Inicializar en 3x3 al cargar
+  calcCrearMatriz();
+})();
+</script>
+</div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/12-propiedades-de-los-determinantes.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/14-desarrollo-de-un-determinante-por-el-metodo-de-.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter" class="siteFooter-empty"><div id="siteFooterContent"></div></footer>
+</div>
+
+</body>
+</html>
